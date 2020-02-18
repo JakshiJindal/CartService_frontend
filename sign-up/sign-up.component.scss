@@ -1,0 +1,104 @@
+input[type=text],
+input[type=password],
+input[type=email]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+}
+/* set a style for all buttons*/
+
+button {
+  background-color: Green;
+  color: white;
+  padding: 15px 20px;
+  margin: 8px 0;
+  cursor: pointer;
+  width: 100%;
+}
+/*set styles for the cancel button*/
+
+/*float cancel and signup buttons and add an equal width*/
+
+.signupbtn {
+  float: left;
+  width: 50%;
+  background-color: #3C4043;
+  color:white;
+}
+/*add padding to container elements*/
+
+.container {
+  padding: 16px;
+}
+/*clear floats*/
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/*styles for cancel button and signup button
+  on extra small screens*/
+
+@media screen and (max-width: 300px) {
+  .signupbtn {
+    width: 100%;
+  }
+}
+.login
+{
+
+
+  background-color:rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  height:80%;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.in {
+  color: rgba(100%, 0%, 0%, 0);
+  text-shadow: 0 0 0 black;
+  width:25%;
+}
+.lists {
+  overflow:hidden;
+  background-color:black;
+  width:100%;
+  float:left;
+  color:white;
+  padding:10px;
+  text-align:center;
+  text-decoration:none;
+  margin:0px;
+}
+i {
+  display:inline;
+  margin:0px;
+  padding:10px;
+  display-content:center;
+}
+
+
+
+.row
+{
+  display:flex;
+ // padding:20px;
+  //width:90%;
+  //height:90%;
+  margin-left:110px;
+}
+
+span{
+  color:midnightblue;
+  text-size:20px;
+}
+

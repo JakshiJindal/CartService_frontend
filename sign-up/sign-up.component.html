@@ -1,0 +1,61 @@
+<span style=" font-family: 'Vibes', cursive;;font-size: 40px;font-weight: bold;top:5px;margin-left:50%;">Zylmo</span>
+<br><br>
+<div class="container col-sm-12 col-md-12">
+<div class="row">
+  <img src="assets/login2.jpg" style="height: 110%;width:100%">
+<div class="login col-sm-12">
+<form class="was-validated " id="model" method="post" novalidate>
+  <div class="form-group row">
+
+  <input type="text"  name="name" class="form-control" id="title" placeholder="username" [(ngModel)]="name" style="width:75%;height:3%;" required="true" />
+
+  <div class="valid-feedback"></div>
+  <div class="invalid-feedback"></div>
+  </div>
+
+  <div class="form-group row ">
+
+
+  <input type="email" placeholder="email"  class="form-control" name="email" [(ngModel)]="email" style="width:75%;height:1%;" required="true" />
+  <div class="valid-feedback"></div>
+  <div class="invalid-feedback"></div>
+  </div>
+
+  <div class="form-group row ">>
+  <input type="text" placeholder="address"  class="form-control" name="address" [(ngModel)]="address" style="width:75%;height:3%;" required="true" />
+
+  <div class="valid-feedback"></div>
+  <div class="invalid-feedback"></div>
+  </div>
+
+  <div class="form-group row ">
+
+  <input type="text" placeholder="city" class="form-control" name="city"  [(ngModel)]="city" style="width:75%;height:3%;" required="true" />
+
+  <div class="valid-feedback"></div>
+  <div class="invalid-feedback"></div>
+  </div>
+
+
+  <div class="form-group row ">
+
+  <input type="text" placeholder="phone" class="form-control"  name="phone" [(ngModel)]="phone" style="width:75%;height:3%;" required="true" />
+
+  <div class="valid-feedback"></div>
+  <div class="invalid-feedback"></div>
+  </div>
+
+  <div class="form-group row ">
+
+  <input type="password" name="password" class="form-control"  placeholder="password"  [(ngModel)]="password" style="width:75%;height:3%;" required="true" />
+
+  <div class="valid-feedback"></div>
+  <div class="invalid-feedback"></div>
+  </div>
+
+  <div class="form-group row ">
+  <input type="submit" value="Submit" class="btn btn-danger" style="width:45%;height:10%;margin-left:50px;" (click)="submitData()" >
+  </div></form>
+</div>
+</div>
+</div>

@@ -1,0 +1,39 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="display-4 text-light" style="font-family: 'Raleway', sans-serif;" (click)="get()">Welcome To Zlymo</a>
+    </div>
+    <nav class="navbar navbar-expand-sm ">
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><a routerLink="/my-profile" class="btn text-light btn-warning btn-sm btn-space navbar-btn" role="button" style="font-size: 15px;">My Profile </a></li>&nbsp;
+        <li class="nav-item"><a class="btn btn-warning text-light btn-sm btn-space navbar-btn" role="button" routerLink="/cart" style="font-size: 15px;">My Cart</a></li>&nbsp;
+        <li class="nav-item"><a class="btn btn-warning text-light btn-sm btn-space navbar-btn" role="button" routerLink="/login" style="font-size: 15px;">Log Out</a></li>&nbsp;
+      </ul>
+    </nav>
+  </div>
+</nav>
+<div class="col-sm-8" *ngIf="myp">
+  <table class="table table-bordered" style="height: 450px">
+    <tr>
+      <td>UserName:</td>
+      <td><input type="text" style="width: 350px;height: 35px" name="username" [(ngModel)]="myp.username" value=" {{myp.username}}"></td>
+    </tr>
+    <tr>
+    <td>Email:</td>
+    <td><input type="text" style="width: 350px;height: 35px" name="username" [(ngModel)]="myp.email" value=" {{myp.email}}"></td>
+    </tr>
+    <tr>
+      <td>Phone No:</td>
+      <td><input type="text" style="width: 350px;height: 35px" name="username" [(ngModel)]="myp.phone" value="{{myp.phone}}"></td>
+    </tr>
+    <tr>
+      <td>Address:</td>
+      <td><input type="text" style="width: 350px;height: 35px" name="username" [(ngModel)]="myp.address" value="{{myp.address}}"></td>
+    </tr>
+    <tr>
+      <td>City:</td>
+      <td><input type="text" style="width: 350px;height: 35px" name="username" [(ngModel)]="myp.city" value="{{myp.city}}"></td>
+    </tr>
+  </table>
+<button class="btn btn-dark" (click)="edit()">Save</button>
+</div>

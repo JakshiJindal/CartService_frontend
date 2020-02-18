@@ -1,0 +1,44 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="display-4 text-light" style="font-family: 'Raleway', sans-serif;" (click)="get()">Welcome To Zlymo</a>
+    </div>
+    <nav class="navbar navbar-expand-sm ">
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><a routerLink="/my-profile" class="btn text-light btn-warning btn-sm btn-space navbar-btn" role="button" style="font-size: 15px;">My Profile </a></li>
+        &nbsp;<li class="nav-item"><a class="btn btn-warning text-light btn-sm btn-space navbar-btn" role="button" routerLink="/cart" style="font-size: 15px;">My Cart</a></li>
+       &nbsp; <li class="nav-item"><a class="btn btn-warning text-light btn-sm btn-space navbar-btn" role="button" routerLink="/login" style="font-size: 15px;">Log Out</a></li>
+      </ul>
+    </nav>
+  </div>
+</nav>
+<h1 style="margin-left:35%;color:darkslategray">MY SHOPPING CART</h1><br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8">
+
+        <div *ngFor="let d of product">
+          <div class="card">
+          <div class="row">
+            <div class="col-sm-6">
+            <img src="{{d.items.src}}" style="height: 200px;width:250px" (click)="s(d.items.id)">
+          </div>
+          <div class="col-sm-6">
+             <b><h1 style="color:midnightblue;font-family:  Broadway ">{{d.items.name}}</h1></b>
+            <h3 >${{d.items.price*d.quantity}}</h3>
+            <h4><span  class="glyphicon glyphicon-minus border a" (click)="removeToProduct(d.items.id)"></span> {{d.quantity}}
+              <span class="glyphicon glyphicon-plus border a" (click)="addProduct(d.items.id)"></span></h4>&nbsp;
+            <button class="btn btn-info" (click)="removecart(d.items.id)">Remove</button>
+            <h1></h1>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <h3>TOTAL AMOUNT:{{total}}</h3>
+        <button (click)="checkOut()" routerLink="/thanks" >Pay</button>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="display-4 text-light" style="font-family: 'Raleway', sans-serif;" (click)="get()">Welcome To Zlymo</a>
+    </div>
+    <nav class="navbar navbar-expand-sm ">
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><a routerLink="/my-profile" class="btn text-light btn-warning btn-sm btn-space navbar-btn" role="button" style="font-size: 15px;">My Profile </a></li>
+        <li class="nav-item"><a class="btn btn-warning text-light btn-sm btn-space navbar-btn" role="button" routerLink="/cart" style="font-size: 15px;">My Cart</a></li>
+        <li class="nav-item"><a class="btn btn-warning text-light btn-sm btn-space navbar-btn" role="button" routerLink="/login" style="font-size: 15px;">Log Out</a></li>
+      </ul>
+    </nav>
+  </div>
+</nav>
+<br><br><br>
+<div class="container">
+  <ul class="nav nav-pills nav-justified a" style="background-color:#3c3c3c;">
+    <li class="nav-item">
+      <a class="nav-link  text-light"  routerLink="/home" >Dashboard</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-light" routerLink="/history">OrderHistory</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-light" routerLink="/pdetails">View Profile</a>
+    </li>
+  </ul><br>
+</div>

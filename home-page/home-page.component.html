@@ -1,0 +1,83 @@
+<app-nv-bar></app-nv-bar>
+
+<div class="flex-container">
+  <input type="text" [(ngModel)]="search1" class="form-control bg-light" style="margin-left: 40px;" placeholder="Search"
+         name="search1" (input)="update($event.target.value)"/>
+  <a type="submit" (click)="search(search1)" routerLink="/home" class="btn btn-default"
+     style="background-color:cadetblue;font-size:15px;">Search</a>
+
+</div>
+<div style="font-size:15px;">
+  <nav class="navbar navbar-expand-sm">
+    <div class="container-fluid">
+      <ul class="nav nav-pills nav-justified a" style="background-color:#3c3c3c;">
+        <li class="nav-item"><a routerLink="/home" class="nav-link-active text-light" (click)="show()">Home</a></li>
+        <li class="nav-item"><a routerLink="/home" class="nav-link text-light"
+                                (click)="showElectrical()">Electronics</a></li>
+        <li class="nav-item"><a routerLink="/home" class="nav-link text-light" (click)="showsports()">Sports</a></li>
+        <li class="nav-item"><a routerLink="/home" class="nav-link text-light" (click)="showclothing()">Clothes</a></li>
+        <li class="nav-item"><a routerLink="/home" class="nav-link text-light" (click)="showbooks()">Books</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-2" style="background-color:cadetblue">
+
+
+        <h2> Price Range </h2>
+
+        <div class="checkbox">
+          <form>
+            <label><input type="radio" name="a" (change)="handleSelected($event,0,1200)">0-1200</label><br>
+            <label><input type="radio"  name="a" (change)="handleSelected($event,1201,3000)">1201-3000</label><br>
+            <label><input type="radio"  name="a" (change)="handleSelected($event,3001,5000)">3001-5000</label><br>
+            <label><input type="radio"  name="a" (change)="handleSelected($event,5001,40000000)">5000 +</label><br>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-10">
+        <div class="w-85  my-2 d-flex flex-wrap" style="height: 200px">
+          <div *ngFor="let de of product1" class="m-2">
+            <div class="card bor">
+              <div class="mt-3 mx-auto">
+                <div class="col-sm-12">
+                <img class="card-img-top image" src={{de.src}}>
+                </div>
+                <div class="card-body">
+                  <div class="col-sm-12">
+                  <h5 class="card-title" style="font-size: medium;font-family: Broadway;">{{de.name}}</h5><br>
+                  </div>
+                  <div class="col-sm-12">
+                  <h5 class="price">${{de.price}}</h5>
+
+                  <div class="rating hidden-sm col-md-6">
+                    <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                  </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                  </i><i class="fa fa-star"></i>
+                  </div>
+                  <br><br>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="separator clear-left col-sm-12">
+                  <span class="btn-add">
+                    <i class="fa fa-shopping-cart"></i> <span (click)="addtoCart(de.id)" class="h">Add To Cart</span>
+                  </span>
+
+                      <span class="btn-details">
+                  <i class="fa fa-list"></i><span (click)="gotodetails(de.id)" class="h">View Details</span>
+                      </span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

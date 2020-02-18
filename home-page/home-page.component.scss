@@ -1,0 +1,98 @@
+
+.flex-container {
+  display: flex;
+  //margin-left:120px;
+  margin-right:120px;
+}
+.image
+{
+  height:180px;
+  width:220px;
+}
+.bor{
+  height:350px;
+  width:286px;
+}
+.nav-link:hover,.nav-link-active:hover{
+  color:#d5d5d5;
+  background-color:#70757a ;
+}
+
+.txt:hover {
+  text-decoration: underline;
+  color:blue;
+}
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+
+
+.col-item:hover .info {
+  background-color: #F5F5DC;
+}
+ .price
+{
+  /*width: 50%;*/
+  float: left;
+  margin-top: 5px;
+}
+
+ .price h5
+{
+  line-height: 20px;
+  margin: 0;
+}
+
+.price-text-color
+{
+  color: #219FD1;
+}
+
+
+
+ .separator
+{
+  border-top: 1px solid #E1E1E1;
+}
+
+.clear-left
+{
+  clear: left;
+}
+
+ .separator span
+{
+  line-height: 20px;
+  margin-bottom: 0;
+  margin-top: 10px;
+  text-align: center;
+}
+
+ .separator span i
+{
+  margin-right: 5px;
+}
+.btn-add
+{
+  width: 50%;
+  float: left;
+}
+
+ .btn-add
+{
+  border-right: 1px solid #E1E1E1;
+}
+
+ .btn-details
+{
+  width: 50%;
+  float: left;
+  padding-left: 20px;
+}
+.h:hover{
+  color:cadetblue;
+  text-decoration: underline;
+}
+a:hover
+{
+  background-color:#5f6368;
+  color:black;
+}

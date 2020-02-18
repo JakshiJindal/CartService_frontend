@@ -1,0 +1,31 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Vibes&display=swap" rel="stylesheet">
+</head>
+
+<div class="container col-sm-12">
+<div class="row">
+  <img src="assets/logo.png" alt="logo" style="width:5%;height: 5%;margin-left:350px;">
+  <span style="margin-left:10px; font-family: 'Vibes', cursive;;font-size: 40px;font-weight: bold;top:0px">Zlymo</span>
+    <img src="assets/login2.jpg" style="height: 100%;width:100%">
+
+  </div>
+
+  <br>
+    <div class="login">
+
+      <div style="text-align:right;"><span style='font-size:20px;color:white'></span></div>
+      <form>
+        <p style="color:white;font-size:120%;">LOGIN</p><br>
+        <input  id="u6" type="text" placeholder="Username" name="username" [(ngModel)]="username" style="width:75%;height:10%;"><br><br>
+        <input  id="p6" type="password" placeholder="Password" name="Password" [(ngModel)]="password" style="width:75%;height:10%;"><br><br>
+        <h4 style="color:white"><input type="checkbox">  Remember Me</h4>
+        <button type="submit" style="background-color: #3c3c3c; color:white;  width:75%;height:30%" (click)="login()">Submit</button><br>
+       <div style="color:white">Have not an account yet?<span style="color:#202124" routerLink="/sign-in">Sign Up</span></div>
+        <br>
+        <p style="color:white;font-size:100%">Forget Password?</p><br><br>
+      </form>
+    </div>
+  </div>
+
+
+
